@@ -1,14 +1,15 @@
 export default function Page() {
   return (
     <div className="space-y-4">
-      <h1 className="text-xl font-medium">Dynamic rendering</h1>
+      <h1 className="text-xl font-medium">Dynamic data fetching</h1>
 
       <div className="space-y-4">
         <ul className="list-disc space-y-2 pl-4 text-sm text-gray-300">
           <li>
-            Dynamic rendering will{' '}
-            <b className="text-vercel-cyan">skip the cache</b> and re-render
-            each page at <b className="text-vercel-cyan">request time</b>.
+            Dynamic data fetching will{' '}
+            <b className="text-vercel-cyan">skip the cache</b>, refetch the data
+            and re-render each page at{' '}
+            <b className="text-vercel-cyan">request time</b>.
           </li>
           <li>
             When setting the{' '}
