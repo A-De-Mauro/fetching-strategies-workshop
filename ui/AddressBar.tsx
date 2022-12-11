@@ -31,7 +31,7 @@ export function AddressBar() {
             <span className="text-gray-600">/</span>
             {pathname
               .split('/')
-              .slice(2)
+              .slice(1)
               .map((segment) => {
                 return (
                   <React.Fragment key={segment}>
@@ -43,7 +43,6 @@ export function AddressBar() {
                         {segment}
                       </span>
                     </span>
-
                     <span className="text-gray-600">/</span>
                   </React.Fragment>
                 );

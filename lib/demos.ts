@@ -40,20 +40,4 @@ export const demos: { name: string; items: Item[] }[] = [
       },
     ],
   },
-  {
-    name: 'File Conventions',
-    items: [
-      {
-        name: 'loading.js',
-        slug: 'loading',
-        description:
-          'Create meaningful loading UI for specific parts of an app',
-      },
-      {
-        name: 'error.js',
-        slug: 'error-handling',
-        description: 'Create error UI for specific parts of an app',
-      },
-    ],
-  },
 ];

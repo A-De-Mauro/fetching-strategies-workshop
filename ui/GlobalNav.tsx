@@ -3,12 +3,16 @@
 import { demos, type Item } from '#/lib/demos';
 import { NextLogo } from '#/ui/NextLogo';
 import Link from 'next/link';
-import { useSelectedLayoutSegment } from 'next/navigation';
+import { useSelectedLayoutSegments } from 'next/navigation';
 import { MenuAlt2Icon, XIcon } from '@heroicons/react/solid';
 import clsx from 'clsx';
 import { useState } from 'react';
+import { usePathname } from 'next/navigation';
 
 export function GlobalNav() {
+  const pathname = usePathname();
+  const currentSlug = pathname?.split('/').slice(1);
+
   const [isOpen, setIsOpen] = useState(false);
   const close = () => setIsOpen(false);
 
@@ -60,7 +64,12 @@ export function GlobalNav() {
 
                 <div className="space-y-1">
                   {section.items.map((item) => (
-                    <GlobalNavItem key={item.slug} item={item} close={close} />
+                    <GlobalNavItem
+                      key={item.slug}
+                      currentSlug={currentSlug}
+                      item={item}
+                      close={close}
+                    />
                   ))}
                 </div>
               </div>
@@ -79,7 +88,8 @@ function GlobalNavItem({
   item: Item;
   close: () => false | void;
 }) {
-  const segment = useSelectedLayoutSegment();
+  const segments = useSelectedLayoutSegments();
+  const segment = segments[1]; // avoid the group
   const isActive = item.slug === segment;
 
   return (
@@ -89,8 +99,8 @@ function GlobalNavItem({
       className={clsx(
         'block rounded-md px-3 py-2 text-sm font-medium hover:text-gray-300',
         {
-          'text-gray-400 hover:bg-gray-800': !isActive,
-          'text-white': isActive,
+          'text-gray-400 hover:bg-gray-700': !isActive,
+          'text-vercel-pink hover:bg-gray-700': isActive,
         },
       )}
     >

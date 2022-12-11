@@ -5,9 +5,7 @@ export async function generateStaticParams() {
 }
 
 async function fetchData(params: { id: string }) {
-  const res = await fetch(
-    `https://639605eba68e43e418f8a886.mockapi.io/posts/${params.id}`,
-  );
+  const res = await fetch(`${process.env.MOCKAPIIO_URL}/posts/${params.id}`);
   const data = await res.json();
   return data;
 }
