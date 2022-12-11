@@ -13,11 +13,11 @@ export async function Post({ id, delay }: { id: string; delay: number }) {
 
   return (
     <div className="text-gray-100">
-      <div className="pb-1 text-gray-100">{data.title}</div>
-      <div className="pb-1">
+      <div className="pb-1 text-gray-100">Title: {data.title}</div>
+      <div className="pb-2">
         <Button />
       </div>
-      <div className="self-start whitespace-nowrap rounded-lg bg-gray-700 px-3 py-1 text-sm font-medium tabular-nums text-gray-100">
+      <div className="self-start whitespace-nowrap rounded-lg border border-dashed border-gray-600 px-3 py-1 text-sm font-medium tabular-nums text-gray-100">
         Last Rendered: {new Date().toLocaleTimeString()}
       </div>
     </div>

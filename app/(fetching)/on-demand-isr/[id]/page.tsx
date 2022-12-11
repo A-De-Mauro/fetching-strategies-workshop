@@ -1,13 +1,12 @@
 export const dynamicParams = true;
 
 export async function generateStaticParams() {
-  return [{ id: '1' }, { id: '2' }];
+  return [];
 }
 
 async function fetchData(params: { id: string }) {
   const res = await fetch(
-    `https://jsonplaceholder.typicode.com/posts/${params.id}`,
-    { next: { revalidate: 15 } },
+    `https://639605eba68e43e418f8a886.mockapi.io/posts/${params.id}`,
   );
   const data = await res.json();
   return data;
@@ -20,10 +19,13 @@ export default async function Page({
   children?: React.ReactNode;
 }) {
   const data = await fetchData(params);
+
   return (
     <div className="space-y-4">
-      <h1 className="text-2xl font-medium text-gray-100">{data.title}</h1>
-      <p className="font-medium text-gray-400">{data.body}</p>
+      <h3 className="font-medium text-gray-100">Title: {data.title}</h3>
+      <div className="self-start whitespace-nowrap rounded-lg border border-dashed border-gray-600 px-3 py-1 text-sm font-medium tabular-nums text-gray-100">
+        Last Rendered: {new Date().toLocaleTimeString()}
+      </div>
     </div>
   );
 }
