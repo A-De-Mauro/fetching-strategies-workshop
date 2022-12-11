@@ -23,6 +23,7 @@
 .vscode
 .vscode/*
 .vscode/settings.json
+*
 
 # debug
 npm-debug.log*
