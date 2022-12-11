@@ -25,7 +25,7 @@ export function GlobalNav() {
           </div>
 
           <h3 className="font-semibold tracking-wide text-gray-400 group-hover:text-gray-50">
-            App Directory <span className="Work in progress">(WIP)</span>
+            Next.js 13: fetching
           </h3>
         </Link>
       </div>

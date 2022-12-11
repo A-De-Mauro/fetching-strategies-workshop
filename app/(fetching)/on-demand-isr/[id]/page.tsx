@@ -7,7 +7,7 @@ export async function generateStaticParams() {
 async function fetchData(params: { id: string }) {
   const res = await fetch(
     `https://jsonplaceholder.typicode.com/posts/${params.id}`,
-    { next: { revalidate: 10 } },
+    { next: { revalidate: 15 } },
   );
   const data = await res.json();
   return data;
@@ -20,13 +20,10 @@ export default async function Page({
   children?: React.ReactNode;
 }) {
   const data = await fetchData(params);
-
   return (
     <div className="space-y-4">
-      <h3 className="text-gray-100">Title: {data.title}</h3>
-      <div className="self-start whitespace-nowrap rounded-lg bg-gray-800 px-3 py-1 text-sm font-medium tabular-nums text-gray-100">
-        Last Rendered: {new Date().toLocaleTimeString()}
-      </div>
+      <h1 className="text-2xl font-medium text-gray-100">{data.title}</h1>
+      <p className="font-medium text-gray-400">{data.body}</p>
     </div>
   );
 }

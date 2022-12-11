@@ -6,23 +6,37 @@ export type Item = {
 
 export const demos: { name: string; items: Item[] }[] = [
   {
-    name: 'Layouts',
+    name: 'Data Fetching strategies',
     items: [
       {
-        name: 'Nested Layouts',
-        slug: 'layouts',
-        description: 'Create UI that is shared across routes',
+        name: 'Server Components (default)',
+        slug: 'server-component',
+        description: 'Static pages generated server-side',
       },
       {
-        name: 'Grouped Layouts',
-        slug: 'route-groups',
-        description: 'Organize routes without affecting URL paths',
+        name: 'Client Components (SWR)',
+        slug: 'client-component',
+        description: 'Fetching from a client component',
       },
       {
-        name: 'Streaming with Suspense',
+        name: 'Dynamic fetching',
+        slug: 'dynamic',
+        description: 'Always re-render at each request',
+      },
+      {
+        name: 'Incremental Static Regeneration',
+        slug: 'isr',
+        description: 'Bust cache based on a time interval',
+      },
+      {
+        name: 'On-demand Incremental Static Regeneration',
+        slug: 'on-demand-isr',
+        description: 'Bust cache using a web hook',
+      },
+      {
+        name: 'Streaming',
         slug: 'streaming',
-        description:
-          'Streaming data fetching from the server with React Suspense',
+        description: 'Use React Suspense to fetch components in parallel',
       },
     ],
   },
@@ -39,59 +53,6 @@ export const demos: { name: string; items: Item[] }[] = [
         name: 'error.js',
         slug: 'error-handling',
         description: 'Create error UI for specific parts of an app',
-      },
-      {
-        name: 'head.js',
-        slug: 'head',
-        description: 'Configure the <head> tag of a route segment',
-      },
-    ],
-  },
-  {
-    name: 'Data Fetching',
-    items: [
-      {
-        name: 'Static-Site Generation',
-        slug: 'ssg',
-        description: 'Generate static pages',
-      },
-      {
-        name: 'Server-Side Rendering',
-        slug: 'ssr',
-        description: 'Server-render pages',
-      },
-      {
-        name: 'Incremental Static Regeneration',
-        slug: 'isr',
-        description: 'Get the best of both worlds between static & dynamic',
-      },
-    ],
-  },
-  {
-    name: 'Components',
-    items: [
-      // TODO: Re-add this page once hooks have been updated.
-      // {
-      //   name: 'Hooks',
-      //   slug: 'hooks',
-      //   description:
-      //     'Preview the hooks available for Client and Server Components',
-      // },
-      {
-        name: 'Client Context',
-        slug: 'context',
-        description:
-          'Pass context between Client Components that cross Server/Client Component boundary',
-      },
-    ],
-  },
-  {
-    name: 'Styling',
-    items: [
-      {
-        name: 'CSS and CSS-in-JS',
-        slug: 'styling',
-        description: 'Preview the supported styling solutions',
       },
     ],
   },
