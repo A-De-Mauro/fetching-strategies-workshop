@@ -1,4 +1,4 @@
-import { HeadInfo } from '#/app/head/HeadInfo';
+import { HeadInfo } from '#/app/(utils)/head/HeadInfo';
 import { fetchSubCategory, PageProps } from '#/lib/getCategories';
 
 export default async function Page({ params }: PageProps) {
