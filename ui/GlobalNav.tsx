@@ -7,12 +7,8 @@ import { useSelectedLayoutSegments } from 'next/navigation';
 import { MenuAlt2Icon, XIcon } from '@heroicons/react/solid';
 import clsx from 'clsx';
 import { useState } from 'react';
-import { usePathname } from 'next/navigation';
 
 export function GlobalNav() {
-  const pathname = usePathname();
-  const currentSlug = pathname?.split('/').slice(1);
-
   const [isOpen, setIsOpen] = useState(false);
   const close = () => setIsOpen(false);
 
@@ -64,12 +60,7 @@ export function GlobalNav() {
 
                 <div className="space-y-1">
                   {section.items.map((item) => (
-                    <GlobalNavItem
-                      key={item.slug}
-                      currentSlug={currentSlug}
-                      item={item}
-                      close={close}
-                    />
+                    <GlobalNavItem key={item.slug} item={item} close={close} />
                   ))}
                 </div>
               </div>
