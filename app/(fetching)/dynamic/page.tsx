@@ -1,11 +1,7 @@
-import { ExternalLink } from '#/ui/ExternalLink';
-
 export default function Page() {
   return (
     <div className="space-y-4">
-      <h1 className="text-xl font-medium text-gray-400/80">
-        Dynamic data fetching
-      </h1>
+      <h1 className="text-xl font-medium">Dynamic fetching</h1>
 
       <div className="space-y-4">
         <ul className="list-disc space-y-2 pl-4 text-sm text-gray-300">
