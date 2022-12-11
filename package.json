@@ -1,5 +1,5 @@
 {
-  "name": "app-playground",
+  "name": "fetching-strategies",
   "private": true,
   "scripts": {
     "build": "next build",
