@@ -27,7 +27,7 @@ export default function Page() {
         <h3>How does it work</h3>
         <ul className="list-decimal space-y-2 pl-4 text-sm text-gray-100">
           <li>
-            Run `yarn build && yarn start` to generate a
+            Run `yarn build && yarn start` to generate a{' '}
             <b className="text-vercel-cyan">production build</b> on localhost
           </li>
           <li>
@@ -36,9 +36,8 @@ export default function Page() {
           </li>
           <li>
             Try to <b className="text-vercel-cyan">refresh</b> the pages: it
-            page should
-            <b className="text-vercel-cyan">never re-render</b> after the first
-            cached render.
+            page should <b className="text-vercel-cyan">never re-render</b>{' '}
+            after the first cached render.
           </li>
         </ul>
         <div className="text-sm text-gray-400">
