@@ -9,7 +9,7 @@ export default function Page() {
       </h1>
 
       <div className="space-y-10 text-white">
-        <h3>Welcome!!</h3>
+        <h3>Welcome!</h3>
         {demos.map((section) => {
           return (
             <div key={section.name} className="space-y-5">
