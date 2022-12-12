@@ -4,7 +4,7 @@ export default function Page() {
       <h1 className="text-xl font-medium">On-demand ISR</h1>
 
       <div className="space-y-4">
-        <ul className="list-disc space-y-2 pl-4 text-sm text-gray-300">
+        <ul className="list-disc space-y-2 pl-4 text-sm text-gray-100">
           <li>
             On-demand ISR invalidates the cache of a single url only when{' '}
             <b className="text-vercel-cyan">calling a specific /api</b> url with

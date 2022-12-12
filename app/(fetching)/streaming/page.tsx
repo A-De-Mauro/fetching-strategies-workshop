@@ -4,7 +4,7 @@ export default async function Page() {
       <div className="space-y-4">
         <h1 className="text-xl font-medium">Streaming with Suspense</h1>
         <div className="space-y-4">
-          <ul className="list-disc space-y-2 pl-4 text-sm text-gray-300">
+          <ul className="list-disc space-y-2 pl-4 text-sm text-gray-100">
             <li>
               Streaming allows you to{' '}
               <b className="text-vercel-cyan">

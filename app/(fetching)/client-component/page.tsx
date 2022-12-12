@@ -4,7 +4,7 @@ export default function Page() {
       <h1 className="text-xl font-medium">Client components</h1>
 
       <div className="space-y-4">
-        <ul className="list-disc space-y-2 pl-4 text-sm text-gray-300">
+        <ul className="list-disc space-y-2 pl-4 text-sm text-gray-100">
           <li>
             You can use a Client Component whenever you need some client-side
             tool or functionality:{' '}
